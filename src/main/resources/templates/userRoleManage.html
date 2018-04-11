@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cssmoban</title>
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <!-- TABLE STYLES-->
+    <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+
+    <!-- 日期控件 -->
+    <link href="assets/css/daterangepicker.css" rel="stylesheet" />
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><strong>LM派送系统</strong></a>
+        </div>
+
+        <ul class="nav navbar-top-links navbar-right">
+
+            <!-- /.dropdown -->
+
+            <!-- /.dropdown -->
+
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+
+                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+    </nav>
+    <!--/. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+
+                <li>
+                    <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> 首页看板</a>
+                </li>
+                <li>
+                    <a href="ui-elements.html"><i class="fa fa-desktop"></i>Forward包裹状态管理<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="task.html">任务计划</a>
+                        </li>
+                        <li>
+                            <a href="task_confirm.html">调度任务确认</a>
+                        </li>
+                        <li>
+                            <a href="arrive_scan.html">包裹到站扫描</a>
+                        </li>
+                        <li>
+                            <a href="#">包裹出站扫描<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="dispatch_order.html">派送路单</a>
+                                </li>
+                                <li>
+                                    <a href="#">转交第三方<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="transmit_third_party.html">标签打印</a>
+                                        </li>
+                                        <li>
+                                            <a href="dispatch_order_transition.html">交接单</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">派送动态更新<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li>
+                                    <a href="dispatch_status_list.html">派送状态列表</a>
+                                </li>
+                                <li>
+                                    <a href="sign_voucher.html">客户签收凭证</a>
+                                </li>
+                                <li>
+                                    <a href="COD_amount_adjustment.html">COD金额调整包裹</a>
+                                </li>
+                            </ul>
+
+                        </li>
+
+                        <li>
+                            <a href="back_to_the_station_scan.html">回站扫描</a>
+                        </li>
+
+                        <li>
+                            <a href="#">包裹退回<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+
+                                <li>
+                                    <a href="package_return_confirm.html">确认安排退回</a>
+                                </li>
+
+                                <li>
+                                    <a href="on_the_way_back.html">退回途中</a>
+                                </li>
+                                <li>
+                                    <a href="return_sign.html">退件签收</a>
+                                </li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="tab-panel.html"><i class="fa fa-qrcode"></i>财务管理<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="driver_pay_in.html">司机缴款</a>
+                        </li>
+                        <li>
+                            <a href="finance_deposit.html">财务存款</a>
+                        </li>
+                        <li>
+                            <a href="pay_in_inquiry.html">缴款批次查询</a>
+                        </li>
+                        <li>
+                            <a href="driver_reward.html">司机派送奖励</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="table.html"><i class="fa fa-table"></i>派送司机管理<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="daily_kilometre.html">司机公里数和工作时间</a>
+                        </li>
+
+                        <li>
+                            <a href="telephone_record.html">电话记录</a>
+                        </li>
+                        <li>
+                            <a href="GPS_monitor.html">GPS监控</a>
+                        </li>
+                        <li>
+                            <a href="dispatch_detail.html">包裹派送明细</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sitemap"></i>上门取件（下一期）<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#">待取件列表</a>
+                        </li>
+                        <li>
+                            <a href="#">已取件列表</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-sitemap"></i>MIS报表<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#">今日派送报表</a>
+                        </li>
+                        <li>
+                            <a href="#">今日预付款报表</a>
+                        </li>
+                        <li>
+                            <a href="#">今日COD付款报表</a>
+                        </li>
+                        <li>
+                            <a href="#">当月派送报表</a>
+                        </li>
+                        <li>
+                            <a href="#">当月预付款报表</a>
+                        </li>
+                        <li>
+                            <a href="#">当月COD付款报表</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="tab-panel.html"><i class="fa fa-qrcode"></i>短信通知工具<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="SMS-send.html">短信发送</a>
+                        </li>
+                        <li>
+                            <a href="SMS-manage.html">全部日志</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="empty.html"><i class="fa fa-fw fa-file"></i>系统设置<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="userManage.html">用户管理</a>
+                        </li>
+                        <li>
+                            <a href="userRoleManage.html">角色管理</a>
+                        </li>
+
+                        <li>
+                            <a href="userPassword.html">修改密码</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- /. NAV SIDE  -->
+    <div id="page-wrapper" >
+        <div class="header">
+            <h1 class="page-header">
+                角色管理
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">系统设置</a></li>
+                <li class="active">角色管理</li>
+            </ol>
+
+        </div>
+
+        <div id="page-inner" class="row" style="background-color: #fff">
+            <form class="form-horizontal">
+                <div class="form-group row">
+                    <h4>角色管理：</h4>
+                </div>
+                <div class="form-group row">
+                    <label for="disabledSelect" class="col-sm-2 control-label" >角色选择:</label>
+                    <div class=" col-sm-10 col-lg-2 col-md-3 col-sm-6 ">
+
+                        <select id="disabledSelect" class="form-control col-sm-10 col-lg-6 col-md-10 col-sm-8 ">
+
+                            <option>司机管理</option>
+                            <option>角色1</option>
+                            <option>角色2</option>
+                            <option>角色3</option>
+                            <option>角色4</option>
+
+                        </select>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-offset-2 col-sm-8">
+
+                        <label class="checkbox-inline checked select">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1 " checked> 修改密码
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 查看短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox3" value="option3" checked> 编写日志
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox4" value="option1" checked> 安排派送
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox5" value="option2"> 发送短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox6" value="option3"> 发送短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox7" value="option1" checked> 发送短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox8" value="option2"> 发送短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox9" value="option3"> 发送短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox10" value="option1"> 修改密码
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox11" value="option2"> 查看短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox12" value="option3"> 编写日志
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox13" value="option1"> 安排派送
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox14" value="option2"> 发送短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox15" value="option3"> 发送短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox16" value="option1"> 发送短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox17" value="option2"> 发送短信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox18" value="option3"> 发送短信
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-info">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <footer><p>Copyright &copy; 2018.CNI All rights reserved.</p>
+        </footer>
+    </div>
+    <!-- /. PAGE INNER  -->
+</div>
+<!-- /. PAGE WRAPPER  -->
+<!-- /. WRAPPER  -->
+<!-- jQuery Js -->
+
+<script src="assets/js/jquery-1.10.2.js"></script>
+<!-- Bootstrap Js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Metis Menu Js -->
+<script src="assets/js/jquery.metisMenu.js"></script>
+<!-- DATA TABLE SCRIPTS -->
+<script src="assets/js/dateRangeSelf.js"></script>
+
+<!-- Custom Js -->
+<script src="assets/js/custom-scripts.js"></script>
+
+<script src="assets/js/moment.js"></script>
+
+<script src="assets/js/daterangepicker.js"></script>
+
+
+</body>
+</html>

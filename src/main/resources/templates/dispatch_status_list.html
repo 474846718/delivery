@@ -1,0 +1,594 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cssmoban</title>
+	<!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- Morris Chart Styles-->
+   
+        <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+     <!-- TABLE STYLES-->
+    <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+
+    <!-- 日期控件 -->
+    <link href="assets/css/daterangepicker.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><strong>LM派送系统</strong></a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+
+                <!-- /.dropdown -->
+
+                <!-- /.dropdown -->
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> 首页看板</a>
+                    </li>
+                    <li>
+                        <a href="ui-elements.html"><i class="fa fa-desktop"></i>Forward包裹状态管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="task.html">任务计划</a>
+                            </li>
+                            <li>
+                                <a href="task_confirm.html">调度任务确认</a>
+                            </li>
+                            <li>
+                                <a href="arrive_scan.html">包裹到站扫描</a>
+                            </li>
+                            <li>
+                                <a href="#">包裹出站扫描<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="dispatch_order.html">派送路单</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">转交第三方<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="transmit_third_party.html">标签打印</a>
+                                            </li>
+                                            <li>
+                                                <a href="dispatch_order_transition.html">交接单</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">派送动态更新<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="dispatch_status_list.html">派送状态列表</a>
+                                    </li>
+                                    <li>
+                                        <a href="sign_voucher.html">客户签收凭证</a>
+                                    </li>
+                                    <li>
+                                        <a href="COD_amount_adjustment.html">COD金额调整包裹</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <a href="back_to_the_station_scan.html">回站扫描</a>
+                            </li>
+
+                            <li>
+                                <a href="#">包裹退回<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+
+                                    <li>
+                                        <a href="package_return_confirm.html">确认安排退回</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="on_the_way_back.html">退回途中</a>
+                                    </li>
+                                    <li>
+                                        <a href="return_sign.html">退件签收</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="tab-panel.html"><i class="fa fa-qrcode"></i>财务管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="driver_pay_in.html">司机缴款</a>
+                            </li>
+                            <li>
+                                <a href="finance_deposit.html">财务存款</a>
+                            </li>
+                            <li>
+                                <a href="pay_in_inquiry.html">缴款批次查询</a>
+                            </li>
+                            <li>
+                                <a href="driver_reward.html">司机派送奖励</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="table.html"><i class="fa fa-table"></i>派送司机管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="daily_kilometre.html">司机公里数和工作时间</a>
+                            </li>
+
+                            <li>
+                                <a href="telephone_record.html">电话记录</a>
+                            </li>
+                            <li>
+                                <a href="GPS_monitor.html">GPS监控</a>
+                            </li>
+                            <li>
+                                <a href="dispatch_detail.html">包裹派送明细</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i>上门取件（下一期）<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">待取件列表</a>
+                            </li>
+                            <li>
+                                <a href="#">已取件列表</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i>MIS报表<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">今日派送报表</a>
+                            </li>
+                            <li>
+                                <a href="#">今日预付款报表</a>
+                            </li>
+                            <li>
+                                <a href="#">今日COD付款报表</a>
+                            </li>
+                            <li>
+                                <a href="#">当月派送报表</a>
+                            </li>
+                            <li>
+                                <a href="#">当月预付款报表</a>
+                            </li>
+                            <li>
+                                <a href="#">当月COD付款报表</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="tab-panel.html"><i class="fa fa-qrcode"></i>短信通知工具<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="SMS-send.html">短信发送</a>
+                            </li>
+                            <li>
+                                <a href="SMS-manage.html">全部日志</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="empty.html"><i class="fa fa-fw fa-file"></i>系统设置<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="userManage.html">用户管理</a>
+                            </li>
+                            <li>
+                                <a href="userRoleManage.html">角色管理</a>
+                            </li>
+
+                            <li>
+                                <a href="userPassword.html">修改密码</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+		  <div class="header"> 
+                        <h1 class="page-header">
+                            派送状态列表
+                        </h1>
+						<ol class="breadcrumb">
+                            <li><a href="#">主页</a></li>
+                            <li><a href="#">Forward包裹状态管理</a></li>
+                            <li><a href="#">派送状态更新</a></li>
+                            <li class="active">派送状态列表</li>
+					</ol> 
+									
+		</div>
+		
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--   Kitchen Sink -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+
+                                <form class="form-inline statusListFormTitle">
+                                    <div class="form-group">
+                                        <label for="config-demo">始发站入库时间：</label>
+                                        <input type="text" class="form-control" id="config-demo" placeholder="点击选取日期" style="min-width: 260px">
+                                    </div>
+                                    <div class="form-group">
+                                            <label for="config-demo2">始发站入库时间：</label>
+                                            <input type="text" class="form-control" id="config-demo2" placeholder="点击选取日期" style="min-width: 260px">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="config-demo3">运单号：</label>
+                                        <input type="text" class="form-control" id="config-demo3" placeholder="请输入运单号">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>支付方式：
+                                        </label>
+                                            <select class="form-control">
+                                                <option>COD</option>
+                                                <option>PP</option>
+
+                                            </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>发件方标识：
+                                        </label>
+                                        <select class="form-control">
+                                            <option>方式一</option>
+                                            <option>方式二</option>
+                                            <option>方式三</option>
+
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="config-demo6">收件电话：
+                                        </label>
+                                        <input type="text" class="form-control" id="config-demo6" placeholder="电话号码">
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="config-demo7">服务编码：
+                                        </label>
+                                        <input type="text" class="form-control" id="config-demo7" placeholder="电话号码">
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>派送司机：
+                                        </label>
+                                        <select class="form-control">
+                                            <option>司机一</option>
+                                            <option>司机二</option>
+                                            <option>司机三</option>
+
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>操作内勤：
+                                        </label>
+                                        <select class="form-control">
+                                            <option>内勤一</option>
+                                            <option>内勤二</option>
+                                            <option>内勤三</option>
+
+                                        </select>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>跟进客服：
+                                        </label>
+                                        <select class="form-control">
+                                            <option>客服一</option>
+                                            <option>客服二</option>
+                                            <option>客服三</option>
+
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>最新状态：
+                                        </label>
+                                        <select class="form-control">
+                                            <option>正常</option>
+                                            <option>异常件待跟进</option>
+                                            <option>异常件处理中</option>
+                                            <option>异常件确认完毕</option>
+
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-info">搜 &nbsp 索</button>
+                                    </div>
+
+
+                                </form>
+
+
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <div>
+
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">全部订单</a></li>
+                                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">待付款</a></li>
+                                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">运输中</a></li>
+                                            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">已完成</a></li>
+                                        </ul>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="home">
+                                                <table class="table " style="border-collapse: separate;">
+
+                                                    <thead>
+                                                        <tr >
+                                                            <th style="border-color:transparent"><button type="button" class="btn btn-default" style="border:none;">全选</button></th>
+                                                            <th style="border-color:transparent;" ><button type="button" class="btn btn-default" style="border:none;">运单号</button></th>
+                                                            <th style="border-color:transparent;" ><button type="button" class="btn btn-default" style="border:none;">包号</button></th>
+                                                            <th style="border-color:transparent;" ><button type="button" class="btn btn-default" style="border:none;">付款类型</button></th>
+                                                            <th style="border-color:transparent;" ><button type="button" class="btn btn-default" style="border:none;">订单金额</button></th>
+                                                            <th style="border-color:transparent;" ><button type="button" class="btn btn-default" style="border:none;">订单类型</button></th>
+                                                            <th style="border-color:transparent;" ><button type="button" class="btn btn-default" style="border:none;">收件人信息</button></th>
+                                                            <th style="border-color:transparent;" ><button type="button" class="btn btn-default" style="border:none;">操作日志</button></th>
+
+                                                            <th style="border-color:transparent;" class="text-right"><button type="button" class="btn btn-default">导出Excel</button></th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="border:1px solid #ccc" rowspan="2">
+                                                                <label class="checkbox-inline checked select">
+                                                                    <input type="checkbox" id="inlineCheckbox" value="option1 " checked>
+                                                                </label>
+                                                            </td >
+                                                            <td >
+                                                                <a href="dispatch_status_detail.html">23434545561</a>
+                                                            </td>
+                                                            <td >
+                                                                INCOD-BD
+                                                            </td>
+                                                            <td >
+                                                                COD
+                                                            </td>
+                                                            <td >
+                                                                INR 1998.23
+                                                            </td>
+                                                            <td >
+                                                                Amaze
+                                                            </td>
+                                                            <td rowspan="2" style="border-bottom:1px solid #ccc">
+                                                                Ms Sonali<br>
+                                                                1st Floor, JMD Pacific Square, Behind 32 Milestone, Delhi-Jaipur Highway (NH - 08) Gurgaon, Haryana-122002 India
+                                                            </td>
+                                                            <td >
+                                                                <a data-toggle="popover" data-placement="left" title="Popover title" >操作查询</a>
+                                                            </td>
+
+                                                            <td style="border:1px solid #ccc;border-right: 1px solid #ccc;" class="statusListTableButton" rowspan="2">
+                                                                <p style="color:green;font-size: 22px">已签收</p>
+                                                                <button type="button" class="btn btn-default">查看</button>
+                                                                <button type="button" id='custom' class="btn btn-default" data-toggle="modal" data-target="#myModal">状态更新</button>
+                                                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                                    <div class="modal-dialog" role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                                <h4 class="modal-title" id="myModalLabel">状态更新</h4>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <table class="table ">
+                                                                                    <tbody>
+                                                                                    <tr >
+                                                                                        <td style="border-color:transparent"><span style="color:red">*</span>标记为</td>
+                                                                                        <td style="border-color:transparent">正常件</td></td>
+                                                                                        <td style="border-color:transparent">问题件</td></td>
+                                                                                        <td style="border-color:transparent">作废件</td></td>
+
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="border-color:transparent"></td>
+                                                                                        <td style="border-color:transparent">
+                                                                                            <label class="checkbox-inline checked select">
+                                                                                                <input type="checkbox" id="inlineCheckbox1" value="option1 " checked> 特殊订单
+                                                                                            </label>
+                                                                                            <br>
+                                                                                            <label class="checkbox-inline">
+                                                                                                <input type="checkbox" id="inlineCheckbox2" value="option2"> 紧急订单
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td style="border-color:transparent">
+                                                                                            <label class="checkbox-inline checked select">
+                                                                                                <input type="checkbox" id="inlineCheckbox3" value="option1 " checked> 问题订单
+                                                                                            </label>
+                                                                                            <br>
+                                                                                            <label class="checkbox-inline">
+                                                                                                <input type="checkbox" id="inlineCheckbox4" value="option2"> 风控订单
+                                                                                            </label>
+                                                                                            <br>
+                                                                                            <label class="checkbox-inline">
+                                                                                                <input type="checkbox" id="inlineCheckbox5" value="option2"> 支付平台投诉订单
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td style="border-color:transparent">
+                                                                                            <label class="checkbox-inline">
+                                                                                                <input type="checkbox" id="inlineCheckbox6" value="option2"> 作废件
+                                                                                            </label>
+                                                                                        </td>
+
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="border-color:transparent"><span style="color:red">*</span>物流备注</td>
+                                                                                        <td style="border-color:transparent" colspan="3">
+                                                                                            <textarea style="width: 90%;"></textarea>
+                                                                                        </td>
+
+                                                                                    </tr>
+
+
+
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                                                                <button type="button" class="btn btn-primary">保存</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="btn btn-default">更改派送时间</button>
+                                                                <button type="button" class="btn btn-default">调整金额</button>
+                                                                <button type="button" class="btn btn-default">NDR件客服跟进</button>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+
+                                                            <td colspan="5" style="border-bottom:1px solid #ccc;border-top-color:transparent">
+                                                                <div class="text-center" >
+                                                                    <span>包装件数：1</span><br>
+                                                                    <span>重量（kg）：2.312</span><br>
+                                                                    <span>内件物品数：6</span><br><br><br>
+                                                                    <span>派送司机：Kumar | 已缴款 &nbsp&nbsp&nbsp 操作内勤：Ram |未缴款</span>
+                                                                    <span>交接出纳：Kumary | 已结转 &nbsp&nbsp&nbsp 跟进客服（如有）：Ram |正常</span>
+
+                                                                </div>
+
+                                                            </td>
+                                                            <td style="border-bottom:1px solid #ccc;border-top-color:transparent">
+                                                                派送次数统计：2&nbsp派送站入库时间：2018.02.14&nbsp客服介入时间(如有)：2018.03.15&nbsp要求派送时间(如有)：2018.03.15&nbsp签收时间(如有)：2018.03.15
+                                                            </td>
+                                                            <td style="border-bottom:1px solid #ccc;border-top-color:transparent"></td>
+
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="profile">2</div>
+                                            <div role="tabpanel" class="tab-pane" id="messages">3</div>
+                                            <div role="tabpanel" class="tab-pane" id="settings">4</div>
+                                        </div>
+
+                                    </div>
+                                    <a href="#" class="btn btn-success">导出Excel</a>
+                                    <a href="#" class="btn btn-success">批量删除</a>
+
+                                    <a href="#" class="btn btn-success">批量更改到站时间</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End  Kitchen Sink -->
+                    </div>
+
+                </div>
+               
+
+
+        </div>
+            <footer><p>Copyright &copy; 2018.CNI All rights reserved.</p>
+            </footer>
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+     <!-- /. WRAPPER  -->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+     <!-- DATA TABLE SCRIPTS -->
+    <script src="assets/js/dateRangeSelf.js"></script>
+    <script>
+
+        $(function () {
+            $('[data-toggle="popover"]').popover(
+
+                {
+                    trigger:'click', //触发方式
+                    template: '<div style="position:absolute;background-color:#fff;border:1px solid #ccc; padding:30px">' +
+                    '<table class="table table-bordered">' +
+                        '<thead><tr><th>操作人</th><th>时间</th><th>详细信息</th><th>包裹状态</th></tr><tr><td>ROOT</td><td>2018-03-15 01.13.01</td><td></td><td>未付款</td></tr></tr><tr><td>ROOT</td><td>2018-03-15 01.13.01</td><td></td><td>未付款</td></tr></tr><tr><td>ROOT</td><td>2018-03-15 01.13.01</td><td></td><td>未付款</td></tr></thead>'+
+                    '</table>' +
+                    '</div>',
+                    html: true, // 为true的话，data-content里就能放html代码了
+                }
+            )
+        })
+    </script>
+
+         <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+
+    <script src="assets/js/moment.js"></script>
+
+    <script src="assets/js/daterangepicker.js"></script>
+
+   
+</body>
+</html>

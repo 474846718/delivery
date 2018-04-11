@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>cssmoban</title>
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet"/>
+    <!-- Morris Chart Styles-->
+
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><strong>Marvel</strong></a>
+        </div>
+
+        <ul class="nav navbar-top-links navbar-right">
+
+            <!-- /.dropdown -->
+
+            <!-- /.dropdown -->
+
+            <!-- /.dropdown -->
+            <li class="dropdown"><a class="dropdown-toggle"
+                                    data-toggle="dropdown" href="#" aria-expanded="false"> <i
+                    class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+            </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User
+                        Profile</a></li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i>
+                        Logout</a></li>
+                </ul> <!-- /.dropdown-user --></li>
+            <!-- /.dropdown -->
+        </ul>
+    </nav>
+    <!--/. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+
+                <li><a href="index.html"><i class="fa fa-dashboard"></i>
+                    Dashboard</a></li>
+                <li><a href="ui-elements.html"><i class="fa fa-desktop"></i>
+                    UI Elements</a></li>
+                <li><a href="chart.html"><i class="fa fa-bar-chart-o"></i>
+                    Charts</a></li>
+
+                <li><a href="table.html" class="active-menu"><i
+                        class="fa fa-table"></i> Responsive Tables</a></li>
+                <li><a href="form.html"><i class="fa fa-edit"></i> Forms </a>
+                </li>
+
+
+                <li><a href="#"><i class="fa fa-sitemap"></i> Multi-Level
+                    Dropdown<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="#">Second Level Link</a></li>
+                        <li><a href="#">Second Level Link</a></li>
+                        <li><a href="#">Second Level Link<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li><a href="#">Third Level Link</a></li>
+                                <li><a href="#">Third Level Link</a></li>
+                                <li><a href="#">Third Level Link</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="empty.html"><i class="fa fa-fw fa-file"></i>
+                    Empty Page</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- /. NAV SIDE  -->
+    <div id="page-wrapper">
+        <div class="header">
+            <h1 class="page-header">
+                Tables Page
+                <small>Responsive tables</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tables</a></li>
+                <li class="active">Data</li>
+            </ol>
+
+        </div>
+
+        <div id="page-inner">
+
+
+            <!-- /. ROW  -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!--   Kitchen Sink -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <a href="/add_userinfo" class="btn btn-success btn-sm">添加用户信息</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>序号</th>
+                                        <th><span th:text="#{label.username}"></span></th>
+                                        <th><span th:text="#{label.age}"></span></th>
+                                        <th><span th:text="#{label.birthday}"></span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody th:if="${not #lists.isEmpty(contents)}">
+                                    <tr th:each="content:${contents.list}">
+                                        <td><span th:text="${content.id}"></span></td>
+                                        <td><span th:text="${content.username}"></span></td>
+                                        <td><span th:text="${content.age}"></span></td>
+                                        <td><span th:text="${content.birthday}"></span></td>
+                                    </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                                <ul class="pagination">
+                                    <li><a href="#">&laquo;</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li class="disabled"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">&raquo;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End  Kitchen Sink -->
+                </div>
+
+            </div>
+            <!-- /. ROW  -->
+
+            <!-- /. ROW  -->
+
+            <!-- /. ROW  -->
+        </div>
+        <footer>
+            <p>
+                Copyright &copy; 2016.Company name All rights reserved.More
+                Templates <a href="http://www.cssmoban.com/" target="_blank"
+                             title="模板之家">模板之家</a> - Collect from <a
+                    href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+            </p>
+        </footer>
+    </div>
+    <!-- /. PAGE INNER  -->
+</div>
+<!-- /. PAGE WRAPPER  -->
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="assets/js/jquery-1.10.2.js"></script>
+<!-- Bootstrap Js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Metis Menu Js -->
+<script src="assets/js/jquery.metisMenu.js"></script>
+
+<script src="assets/js/custom-scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cnilink.delivery.mapper.SysMenuRoleMapper">
+  <resultMap id="BaseResultMap" type="com.cnilink.delivery.entity.SysMenuRole">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sys_menu_id" jdbcType="INTEGER" property="sysMenuId" />
+    <result column="sys_role_id" jdbcType="INTEGER" property="sysRoleId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, sys_menu_id, sys_role_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_menu_role
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sys_menu_role
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cnilink.delivery.entity.SysMenuRole">
+    insert into sys_menu_role (id, sys_menu_id, sys_role_id
+      )
+    values (#{id,jdbcType=INTEGER}, #{sysMenuId,jdbcType=INTEGER}, #{sysRoleId,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.cnilink.delivery.entity.SysMenuRole">
+    insert into sys_menu_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="sysMenuId != null">
+        sys_menu_id,
+      </if>
+      <if test="sysRoleId != null">
+        sys_role_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sysMenuId != null">
+        #{sysMenuId,jdbcType=INTEGER},
+      </if>
+      <if test="sysRoleId != null">
+        #{sysRoleId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cnilink.delivery.entity.SysMenuRole">
+    update sys_menu_role
+    <set>
+      <if test="sysMenuId != null">
+        sys_menu_id = #{sysMenuId,jdbcType=INTEGER},
+      </if>
+      <if test="sysRoleId != null">
+        sys_role_id = #{sysRoleId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cnilink.delivery.entity.SysMenuRole">
+    update sys_menu_role
+    set sys_menu_id = #{sysMenuId,jdbcType=INTEGER},
+      sys_role_id = #{sysRoleId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

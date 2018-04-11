@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cssmoban</title>
+	<!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- Morris Chart Styles-->
+   
+        <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+     <!-- TABLE STYLES-->
+    <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><strong>LM派送系统</strong></a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+
+                <!-- /.dropdown -->
+
+                <!-- /.dropdown -->
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> 首页看板</a>
+                    </li>
+                    <li>
+                        <a href="ui-elements.html"><i class="fa fa-desktop"></i>Forward包裹状态管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="task.html">任务计划</a>
+                            </li>
+                            <li>
+                                <a href="task_confirm.html">调度任务确认</a>
+                            </li>
+                            <li>
+                                <a href="arrive_scan.html">包裹到站扫描</a>
+                            </li>
+                            <li>
+                                <a href="#">包裹出站扫描<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="dispatch_order.html">派送路单</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">转交第三方<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="transmit_third_party.html">标签打印</a>
+                                            </li>
+                                            <li>
+                                                <a href="dispatch_order_transition.html">交接单</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">派送动态更新<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="dispatch_status_list.html">派送状态列表</a>
+                                    </li>
+                                    <li>
+                                        <a href="sign_voucher.html">客户签收凭证</a>
+                                    </li>
+                                    <li>
+                                        <a href="COD_amount_adjustment.html">COD金额调整包裹</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <a href="back_to_the_station_scan.html">回站扫描</a>
+                            </li>
+
+                            <li>
+                                <a href="#">包裹退回<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+
+                                    <li>
+                                        <a href="package_return_confirm.html">确认安排退回</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="on_the_way_back.html">退回途中</a>
+                                    </li>
+                                    <li>
+                                        <a href="return_sign.html">退件签收</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="tab-panel.html"><i class="fa fa-qrcode"></i>财务管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="driver_pay_in.html">司机缴款</a>
+                            </li>
+                            <li>
+                                <a href="finance_deposit.html">财务存款</a>
+                            </li>
+                            <li>
+                                <a href="pay_in_inquiry.html">缴款批次查询</a>
+                            </li>
+                            <li>
+                                <a href="driver_reward.html">司机派送奖励</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="table.html"><i class="fa fa-table"></i>派送司机管理<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="daily_kilometre.html">司机公里数和工作时间</a>
+                            </li>
+
+                            <li>
+                                <a href="telephone_record.html">电话记录</a>
+                            </li>
+                            <li>
+                                <a href="GPS_monitor.html">GPS监控</a>
+                            </li>
+                            <li>
+                                <a href="dispatch_detail.html">包裹派送明细</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i>上门取件（下一期）<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">待取件列表</a>
+                            </li>
+                            <li>
+                                <a href="#">已取件列表</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i>MIS报表<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">今日派送报表</a>
+                            </li>
+                            <li>
+                                <a href="#">今日预付款报表</a>
+                            </li>
+                            <li>
+                                <a href="#">今日COD付款报表</a>
+                            </li>
+                            <li>
+                                <a href="#">当月派送报表</a>
+                            </li>
+                            <li>
+                                <a href="#">当月预付款报表</a>
+                            </li>
+                            <li>
+                                <a href="#">当月COD付款报表</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="tab-panel.html"><i class="fa fa-qrcode"></i>短信通知工具<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="SMS-send.html">短信发送</a>
+                            </li>
+                            <li>
+                                <a href="SMS-manage.html">全部日志</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="empty.html"><i class="fa fa-fw fa-file"></i>系统设置<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="userManage.html">用户管理</a>
+                            </li>
+                            <li>
+                                <a href="userRoleManage.html">角色管理</a>
+                            </li>
+
+                            <li>
+                                <a href="userPassword.html">修改密码</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+		  <div class="header"> 
+                        <h1 class="page-header">
+                            COD金额调整包裹
+                        </h1>
+						<ol class="breadcrumb">
+					  <li><a href="#">Home</a></li>
+					  <li><a href="#">Tables</a></li>
+					  <li class="active">Data</li>
+					</ol> 
+									
+		</div>
+		
+            <div id="page-inner">
+                <div class="row">
+
+
+                    <div class="col-md-6">
+                        <!--    Striped Rows Table  -->
+                        <div class="form-group">
+                            <label>订单号</label>
+
+
+                            <input class="form-control" placeholder="1521514562062">
+                            <a href="#" class="btn btn-info">查询</a>
+                        </div>
+                        <!--  End  Striped Rows Table  -->
+                    </div>
+
+                    <div class="col-md-12">
+                        <!--   Kitchen Sink -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                包裹明细
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label>收件人：张三</label>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label>详细地址信息：广东省深圳市宝安区福永福桥工业区1区14栋201</label>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>原订单金额：INR：987.8</label>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>新金额</label>
+                                                <input class="form-control" placeholder="INR:">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>差异金额：xxxxxx</label>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>备注</label>
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+
+
+                                            <a href="#" class="btn btn-success">更新</a>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- /.row (nested) -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- End  Kitchen Sink -->
+                    </div>
+
+                </div>
+               
+
+
+        </div>
+            <footer><p>Copyright &copy; 2018.CNI All rights reserved.</p></footer>
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+     <!-- DATA TABLE SCRIPTS -->
+
+         <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+    
+   
+</body>
+</html>
